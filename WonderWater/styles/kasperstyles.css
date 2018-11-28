@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+    color: whitesmoke;
+}
+
+body{
+    margin: 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+
+
+.header{
+    text-align: center;
+}
+
+.image{
+    width: 80%;
+    height: auto;
+}
+
+.nyflaske, .holdet{
+    width: 100%;
+    height: auto;
+}
+
+/* Style the navbar */
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+#navbar{
+    overflow: hidden;
+    background-color: black;
+}
+
+/* Navbar Links */
+
+#navbar a{
+    font-family: Papyrus;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    justify-content: space-around;
+}
+
+#navbar a:hover{
+    background-color: #000033;
+    color: #f2f2f2;
+}
+
+#navbar a.active{
+    background-color: #ebf2fd;
+    color: black;
+}
+
+/* Page content */
+
+.content{
+    padding: 16px;
+}
+
+.article, .article2, .article3 {
+    background-color: darkslategrey;
+    color: white;
+    text-align: center;
+}
+
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+
+.sticky + .content{
+    padding-top: 144px;
+}
+
+.footer{
+    text-align: center;
+}
+
+
+/* media query for mobile first */
+
+@media only screen and (min-width: 768px) {
+
+
+    .sticky + .content{
+        padding-top: 120px;
+    }
+
+    body{
+        font-size: larger;
+        margin: 0;
+    }
+
+    #navbar a{
+        font-size: 24px;
+    }
+
+    .image{
+        width: 30%;
+
+    }
+/*
+    .article {
+        background-color: darkslategrey;
+        color: white;
+        text-align: center;
+    }
+
+    .article2 {
+        background-color: darkslategrey;
+        color: white;
+        text-align: center;
+    }
+
+    .article3 {
+        background-color: darkslategrey;
+        color: white;
+        text-align: center;
+    }
+    */
+
+    .footer {
+        text-align: center;
+
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .sticky + .content{
+        padding-top: 240px;
+    }
+
+}

@@ -1,0 +1,228 @@
+*{
+    box-sizing: border-box;
+    color: whitesmoke;
+}
+
+body {
+    margin: 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+
+}
+
+
+
+.header{
+    text-align: center;
+}
+
+.image{
+    width: 80%;
+    height: auto;
+}
+
+/* Style the navbar */
+
+
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+#navbar{
+    overflow: hidden;
+    background-color: black;
+}
+
+/* Navbar Links */
+
+#navbar a{
+    font-family: Papyrus;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    justify-content: space-around;
+}
+
+#navbar a:hover{
+    background-color: #000033;
+    color: #f2f2f2;
+}
+
+#navbar a.active{
+    background-color: #ebf2fd;
+    color: black;
+
+}
+
+/* Page content */
+
+.content{
+    padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+
+.sticky + .content{
+    padding-top: 120px;
+}
+
+#more, #more2, #more3, #more4, #more5, #more6, #more7 {
+    display: none;
+}
+
+/*Removes background from the show more button and makes */
+
+#myBtn,#myBtn2, #myBtn3, #myBtn4, #myBtn5, #myBtn6, #myBtn7 {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: medium;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/*
+.grid div:nth-child(even){
+}
+
+.grid div:nth-child(odd){
+}
+*/
+
+.text, .text2{
+    text-align: center;
+    font-size: large;
+}
+
+.pris, .pris2{
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+.Buy-now{
+    font-size: medium;
+    color:   white;
+    background-color:  #000066;
+    cursor: pointer;
+}
+
+.billede{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.footer{
+    text-align: center;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .sticky + .content{
+        padding-top: 120px;
+    }
+
+    body{
+        font-size: larger;
+        margin: 0;
+    }
+
+    #navbar a{
+        font-size: 24px;
+    }
+
+    .image{
+        width: 30%;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .grid div:nth-child(even) {
+    }
+
+    .grid div:nth-child(odd) {
+    }
+
+    .text, .text2 {
+        text-align: center;
+        font-size: large;
+    }
+
+    .pris, .pris2 {
+        text-align: center;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    .Buy-now {
+        font-size: medium;
+        color: white;
+        background-color: #000066;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 1200px){
+
+    .sticky + .content{
+        padding-top: 60px;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .grid div:nth-child(even){
+    }
+
+    .grid div:nth-child(odd){
+    }
+
+    .text, .text2{
+        text-align: center;
+        font-size: x-small;
+    }
+
+    .pris, .pris2{
+        text-align: center;
+        font-size: small;
+        font-weight: bold;
+    }
+
+    .Buy-now{
+        font-size: x-small;
+        color:   white;
+        background-color:  #000066;
+        cursor: pointer;
+    }
+    #myBtn,#myBtn2, #myBtn3, #myBtn4, #myBtn5, #myBtn6, #myBtn7 {
+
+        font-size: x-small;
+    }
+}
